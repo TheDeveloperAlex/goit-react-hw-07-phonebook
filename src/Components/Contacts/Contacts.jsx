@@ -28,10 +28,9 @@ const Contacts = ({ filtredContacts, loading }) => {
     };
 
     const removeContact =  (id) => {
-        // await
+        
         return dispatch(operations.deleteContact(id));
-        // console.log(operations.fetchContacts());
-        // console.log(dispatch(operations.fetchContacts())); 
+        
 
     }
     return (

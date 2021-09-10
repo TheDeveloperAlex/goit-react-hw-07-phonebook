@@ -9,7 +9,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 
 
-function ContactForm({ contacts, createContact }) {
+function ContactForm({ contacts }) {
     const [name, setName] = useState('');
     const [number, setNumber] = useState('');
     const dispatch = useDispatch();
@@ -111,14 +111,9 @@ function ContactForm({ contacts, createContact }) {
 const mapStateToProps = state => {
     return {
         contacts: selectors.getAllContacts(state),
-        // contacts: state.contacts.enteties
+        
     };
 };
 
-// const mapDispatchToProps = dispatch => {
-//     return {
-//         createContact: (data) => dispatch(actions.createContact(data)),
-//     };
-// };
 
 export default connect(mapStateToProps)(ContactForm);

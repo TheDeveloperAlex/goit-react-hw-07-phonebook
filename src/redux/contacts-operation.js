@@ -45,10 +45,8 @@ export const addContact = createAsyncThunk(
 export const deleteContact = createAsyncThunk(
   "contacts/deleteContact",
   async (id) => {
-    // console.log(deleteContactsApi(id));
-    // console.log(id);
     const deleteContactRes = await deleteContactsApi(id);
-    // const res = state.filter((contact) => contact.id !== payload);
+
     return id;
   }
 );
